@@ -13,7 +13,7 @@ public class Tile : MonoBehaviour {
         y = eY;
         transform.localPosition = new Vector3(x, y, 0);
         gameObject.name = x.ToString("D3") + "x" + y.ToString("D3");
-        
+
         if (eTileNum == -1)
         {
             eTileNum = TileCamera.GET_MAP(x, y);
@@ -22,8 +22,5 @@ public class Tile : MonoBehaviour {
         GetComponent<SpriteRenderer>().sprite = TileCamera.SPRITES[tileNum];
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
 }
